@@ -36,12 +36,13 @@ Data sources: (MLA citations at end of page)
 ## Methods and Results  
 The bulk of the time dedicated to this project went into finding the data that we wanted to analyze and creating a pristine dataset that we could then analyze through our Colab notebook. We searched for a long time at the beginning of this project looking for an importable data file containing NFL season data along with the names of the head coaches corresponding to the team and years that they coached, and could not find it. So what we decided to do instead was create our own datafile. It took a lot of time looking on the internet to find season and coach data for each team and each year from 2002 to 2023, but we feel it was worth it in the end as we did not have nearly any data cleaning and wrangling to do on the back end once we started our analysis and coding. One of the biggest challenges was determining how to handle seasons in which a team had multiple head coaches in one year. In those instances, we decided to have two rows for that season and team, one row for each head coach, with the teams record that season split up by their record under each head coach. This allowed us to look at some more specific questions such as if firing a head coach specifically in the middle of season makes a difference on team performance. Over the course of one season, the player composition of a team is largely unchanged, so in effect we are keeping more “variables” the same that could impact team performance, and attempting to single out whether a head coaching change makes a difference. The first plot we created was a preliminary scatterplot of the win percentages of NFL teams by number of head coaches they have had since 2002.
 
-INSERT FIGURE HERE  
+<img src="1st Plot.png" alt="Alt Text" />
+ 
 Correlation Coefficient: c = -0.758
 
 The scatter plot above is plotting each team’s total win percentage for each team on the y-axis, with the number of different coaches for each team on the x-axis. The correlation coefficient of -0.758 is showing a strong negative correlation between the two variables; when a team has more coaches, their total win percentage is lower compared to a team with less coaches. Clearly, teams that do not fire their coach as often tend to have more wins, as shown by our linear regression. But do the teams who do fire their coach actually get better following the firing? One way to answer this is by examining win totals of the coach's final seasons with a team compared to win totals in the coach's first seasons with teams. We do this in the following histograms and boxplots:  
 
-INSERT FIGURES HERE  
+<img src="2nd Plot.png" alt="Alt Text" />
 Mean win percentage for new coaches (blue graph): 0.42  
 Mean win percentage for last coaches (red graph): 0.324  
 
@@ -49,11 +50,11 @@ From these visualizations, we see that, although not guaranteed, teams generally
 
 Now we filter the dataframe for only the years in which a team fired their coach in the middle of a season and plot those histograms and calculate their means to determine if there’s a difference in team performance in the middle of a single season by firing their coach, with most other characteristics (i.e. roster composition, assistant coaches, payroll, etc.) held roughly constant during the course of a single season.  
 
-INSERT FIGURE HERE  
+<img src="3rd Plot.png" alt="Alt Text" /> 
 
 In the new Coach distribution, there are two coaches that coached exactly one game and each won that game. We removed those observations from the filtered observations and considered them outliers, the updated visualization is shown below.  
 
-INSERT FIGURE HERE  
+<img src="4th Plot.png" alt="Alt Text" /> 
 Mean win percentage for old coaches (red graph): 0.254  
 Mean win percentage for new coaches (blue graph): 0.356  
 
@@ -61,7 +62,7 @@ For these visualizations above, the data is only including teams and years when 
 
 Another measurement of a team’s performance is point differential (points scored - points against). This gives a more complete picture of how a team’s wins and losses actually played out.  
 
-INSERT FIGURE HERE  
+<img src="5th Plot.png" alt="Alt Text" /> 
 
 We can see, once again, that performance improves after the hiring of a new coach. There is an increase of roughly 30 in the mean point differential for teams after hiring a new coach. Ultimately, this leads to the findings below and helps us answer our question of, “Does firing a coach and hiring a new one boost the team’s performance?”  
 
