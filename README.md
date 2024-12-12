@@ -2,7 +2,7 @@
 ## Group Members  
 Matt Mascavage, Nik Greb, Owen Kim  
 ## Colab Worksheet  
-Linked [here](https://colab.research.google.com/drive/17cAjFsPaYrHx-ixhsSl-JyjIttDtKu-J?usp=sharing)
+<a href="https://github.com/standstillMatt/Final_Portfolio_Fall2024/blob/main/Data_Science_Final_Project.ipynb" target="_blank">View Notebook</a>
 ## Introduction  
 We created our own custom data set (linked here) by compiling statistics collected from a number of sources. The final data set contained the following info from the 2002 - 2023 NFL season (we chose this range because the 32nd team, the Texans, were added to the League in 2002):  
   *  **Year** - The season for that entry
